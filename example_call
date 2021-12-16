@@ -1,0 +1,21 @@
+module vpce {
+  source          = ""
+  vpc_id          = ""
+  region          = ""
+  environment     = ""
+  tags            = ""
+  subnet_ids      = ""
+  route_table_ids = ""
+  extra_sgs       = []
+  ingress_sgs     = []
+  ingress_cidrs   = []
+  vpc_endpoints   = {
+    s3             = true
+    ecr            = false
+    ssm            = false
+    ecs            = false
+    secretsmanager = false
+    kms            = false
+    ec2            = false
+  }
+}
